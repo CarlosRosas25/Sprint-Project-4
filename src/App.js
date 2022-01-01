@@ -1,13 +1,11 @@
 import "./App.css";
+import LandingPage from "./components/LandingPage/landingPage";
 import TweetForm from "./components/TweetForm/tweetForm";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>DEVS_UNITED</h1>
-        <TweetForm />
-      </header>
+      <LandingPage />
     </div>
   );
 }
