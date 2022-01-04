@@ -7,10 +7,10 @@ import {
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 
-const auth = getAuth();
-
 function useGoogleAuthentication() {
   const provider = new GoogleAuthProvider();
+  const auth = getAuth();
+
   const { setUser } = useContext(UserContext);
 
   const login = async () => {
