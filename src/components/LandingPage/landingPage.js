@@ -13,7 +13,7 @@ function LandingPage() {
       </div>
       <div className="welcome-zone">
         <h2>Welcome developer!</h2>
-        <text>Please sign in to be part of our community.</text>
+        <p>Please sign in to be part of our community.</p>
         <button onClick={login}>Sign in with Google</button>
       </div>
     </div>

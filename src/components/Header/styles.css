@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: rgb(105, 32, 32);
+}
+
+.header-content {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-header {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.logo2 {
+  width: 30px;
+  margin-left: 60px;
+}
+
+.logo1 {
+  width: 140px;
+}
