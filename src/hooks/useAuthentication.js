@@ -19,8 +19,7 @@ function useGoogleAuthentication() {
       const user = result.user;
       setUser(user);
     } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      console.log(error);
     }
   };
 

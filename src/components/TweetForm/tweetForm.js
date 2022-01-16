@@ -3,8 +3,15 @@ import useTweetCollection from "../../hooks/useTweetCollection";
 import { UserContext } from "../../contexts/UserContext";
 import "./styles.css";
 
+const initialState = {
+  tweet: "",
+  author: "",
+  uid: "",
+  email: "",
+};
+
 function TweetForm() {
-  const [formstate, setFormstate] = useState({ tweet: "" });
+  const [formstate, setFormstate] = useState(initialState);
 
   const { user } = useContext(UserContext);
   const { addNewTweet } = useTweetCollection();
@@ -13,6 +20,9 @@ function TweetForm() {
     setFormstate({
       ...formstate,
       [e.target.name]: e.target.value,
+      author: user ? user.displayName : "Unknown",
+      uid: user && user.uid,
+      email: user && user.email,
     });
   };
 
@@ -20,7 +30,7 @@ function TweetForm() {
     event.preventDefault();
     addNewTweet(formstate);
 
-    setFormstate({ tweet: "" });
+    setFormstate(initialState);
   };
 
   return (
@@ -34,7 +44,9 @@ function TweetForm() {
           value={formstate.tweet}
           onChange={handleChange}
         />
-        <button className="post-button" type="submit">POST</button>
+        <button className="post-button" type="submit">
+          POST
+        </button>
       </form>
     </div>
   );
