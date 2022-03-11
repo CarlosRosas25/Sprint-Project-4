@@ -1,5 +1,12 @@
 import { useContext } from "react";
-import { addDoc, getDocs } from "firebase/firestore";
+import {
+  addDoc,
+  getDocs,
+  doc,
+  deleteDoc,
+  updateDoc,
+  getDoc,
+} from "firebase/firestore";
 import { tweetsCollectionRef } from "../firebase/config";
 import { TweetsContext } from "../contexts/TweetsContext";
 
@@ -30,7 +37,27 @@ function useTweetCollection() {
     }
   };
 
-  return { addNewTweet, getTweets };
+  const deleteTweet = async (tweetId) => {
+    try {
+      await deleteDoc(doc(tweetsCollectionRef, tweetId));
+      await getTweets();
+    } catch (e) {
+      console.error("Error deleting document: ", e);
+    }
+  };
+
+  const addLikes = async (tweetId) => {
+    const docRef = await doc(tweetsCollectionRef, tweetId);
+    const docSnap = await getDoc(docRef);
+
+    await updateDoc(docRef, {
+      likes: docSnap.data().likes ? docSnap.data().likes + 1 : 1,
+    });
+
+    await getTweets();
+  };
+
+  return { addNewTweet, getTweets, deleteTweet, addLikes };
 }
 
 export default useTweetCollection;

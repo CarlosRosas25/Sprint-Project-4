@@ -4,10 +4,8 @@ import { UserContext } from "../../contexts/UserContext";
 import "./styles.css";
 
 const initialState = {
-  tweet: "",
-  author: "",
-  uid: "",
-  email: "",
+  text: "",
+  userInfo: { author: "", uid: "", email: "" },
 };
 
 function TweetForm() {
@@ -19,10 +17,12 @@ function TweetForm() {
   const handleChange = (e) => {
     setFormstate({
       ...formstate,
-      [e.target.name]: e.target.value,
-      author: user ? user.displayName : "Unknown",
-      uid: user && user.uid,
-      email: user && user.email,
+      text: e.target.value,
+      userInfo: {
+        author: user ? user.displayName : "Unknown",
+        uid: user && user.uid,
+        email: user && user.email,
+      },
     });
   };
 
@@ -41,7 +41,7 @@ function TweetForm() {
           className="text-area"
           placeholder="What's happening?"
           name="tweet"
-          value={formstate.tweet}
+          value={formstate.text}
           onChange={handleChange}
         />
         <button className="post-button" type="submit">
