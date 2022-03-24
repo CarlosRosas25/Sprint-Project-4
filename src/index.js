@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import UserProvider from "./contexts/UserContext";
 import TweetsProvider from "./contexts/TweetsContext";

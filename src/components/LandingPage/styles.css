@@ -9,11 +9,8 @@ body > #root > div {
   width: 100%;
 }
 
-.LandingPage {
-  background-color: brown;
-}
-
 .initial-page {
+  background-color: brown;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
