@@ -6,6 +6,7 @@ import TweetsProvider from "./contexts/TweetsContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage/landingPage";
 import TweetsView from "./components/TweetsView/tweetsView";
+import Profile from "./components/Profile/profile";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<TweetsView />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </BrowserRouter>
       </TweetsProvider>

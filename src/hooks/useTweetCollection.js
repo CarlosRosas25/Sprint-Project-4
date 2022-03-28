@@ -30,7 +30,7 @@ function useTweetCollection() {
 
   const addNewTweet = async (tweetObject) => {
     try {
-      const docRef = await addDoc(tweetsCollectionRef, tweetObject);
+      await addDoc(tweetsCollectionRef, tweetObject);
       await getTweets();
     } catch (e) {
       console.error("Error adding document: ", e);

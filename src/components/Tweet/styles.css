@@ -1,12 +1,15 @@
 .tweet-card {
   display: flex;
   justify-content: center;
-  background-color: rgb(105, 32, 32);
-  padding: 10px;
+  background-color: #250c23;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .username {
   font-size: 20px;
+  color: #fff;
+  padding-left: 5px;
 }
 
 .email {
@@ -25,4 +28,36 @@
   color: #fff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 15px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.heart:hover {
+  cursor: pointer;
+}
+
+.number-likes {
+  color: #f50d5a;
+  padding-left: 5px;
+}
+
+.line {
+  color: #60265b;
+}
+
+.trashcan-button {
+  background: none;
+  border: none;
+  display: flex;
+}
+
+.trashcan-button:hover {
+  cursor: pointer;
 }

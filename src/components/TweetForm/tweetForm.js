@@ -19,9 +19,10 @@ function TweetForm() {
       ...formstate,
       text: e.target.value,
       userInfo: {
-        author: user ? user.displayName : "Unknown",
+        author: user && user.displayName,
         uid: user && user.uid,
         email: user && user.email,
+        photo: user && user.photoURL,
       },
     });
   };

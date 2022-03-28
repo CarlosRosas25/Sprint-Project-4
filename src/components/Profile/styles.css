@@ -1,0 +1,47 @@
+.header-profile {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: #250c23;
+}
+
+.logo-profile {
+  width: 30px;
+}
+
+.logout {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3px 8px;
+  background-color: #f50d5a;
+  border: none;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+
+.middle {
+  height: 275px;
+  background-color: #150714;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  color: aliceblue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}

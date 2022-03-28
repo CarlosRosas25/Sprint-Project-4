@@ -15,7 +15,7 @@ function TweetsList() {
   }, []);
 
   return (
-    <div>
+    <div className="tweetsList">
       {tweetsArray.length > 0
         ? tweetsArray.map((object) => {
             return <Tweet key={object.id} tweetData={object} />;
