@@ -1,4 +1,25 @@
 .tweetsList {
+  height: 100%;
   background-color: #250c23;
-  border-top: #60256b;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}
+
+.loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 10px solid #dddddd;
+  border-top-color: #60256b;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
 }

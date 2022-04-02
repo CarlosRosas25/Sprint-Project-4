@@ -33,6 +33,11 @@
   flex-direction: column;
 }
 
+.posts {
+  height: 100%;
+  background-color: #250c23;
+}
+
 .profile-picture {
   width: 150px;
   height: 150px;
